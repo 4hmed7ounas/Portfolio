@@ -6,7 +6,7 @@ let projectButtonC = document.getElementById("circuit");
 let cirH = document.getElementById("cir-h");
 let projectButtonX = document.getElementById("x");
 projectButtonW.addEventListener("click", () => {
-    webH.style.display = 'flex';
+    web1.style.display = 'flex';
     web1.style.display = 'flex';
     web2.style.display = 'flex';
     progH.style.display = 'none';
@@ -48,6 +48,7 @@ projectButtonC.addEventListener("click", () => {
 });
 
 projectButtonX.addEventListener("click", () => {
+    webH.style.transform = '0.5s ease-in-out';
     webH.style.display = 'none';
     web1.style.display = 'none';
     web2.style.display = 'none';

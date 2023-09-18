@@ -44,7 +44,10 @@ header {
     left: 0;
     z-index: 1;
 }
-
+.navbar a{
+    transform: scale(1);
+    transition: 0.5s ease-in-out;
+}
 .navbar-menu.active {
     display: block;
 }
@@ -118,6 +121,8 @@ header {
 
 a:hover {
     opacity: 0.7;
+    transform: scale(1.04);
+    transition: 0.5s ease-in-out;
 }
 
 #web1,
@@ -211,8 +216,15 @@ a:hover {
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
+    width: fit-content;
+    cursor: pointer;
+    transform: scale(1);
+    transition: 0.5s ease-in-out;
 }
-
+.card:hover{
+    transition: 0.5s ease-in-out;
+    transform: scale(1.04);
+}
 .card-img {
     width: 100%;
 }
@@ -226,6 +238,7 @@ a:hover {
     color: rgba(255, 255, 255, 0.75);
     border: 2px solid rgb(5, 30, 43);
     font-size: larger;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -250,13 +263,13 @@ a:hover {
 
 .reveal {
     position: relative;
-    transform: translateY(20px);
+    transform: scale(1.04);
     opacity: 0;
     transition: 1s ease-in-out;
 }
 
 .reveal.active {
-    transform: translateY(0);
+    transform: scale(1);
     opacity: 1;
 }
 
@@ -317,4 +330,8 @@ a:hover {
     color: rgba(255, 255, 255, 0.75);
     border: 2px solid rgb(5, 30, 43);
     display: none;
+    cursor: pointer;
+}
+#BackToTop:hover{
+    opacity: 0.7;
 }
