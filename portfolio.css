@@ -5,49 +5,36 @@ html {
 body {
     margin: 0px;
     padding: 0px;
-    background-color: rgb(0, 12, 13);
+    background-color: rgba(123, 72, 41, 0.32);
+    color: white;
     font-family: sans-serif;
 }
 
 .color {
+    background-color: rgb(82, 16, 91);
     color: rgba(255, 255, 255, 0.55);
 }
 
 .color1 {
-    background-color: rgb(19, 50, 66);
-    color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(123, 72, 41, 0.32);
+    color: rgb(42, 8, 47);
+}
+
+.color2 {
+    background-color: rgb(26, 1, 30);
+    color: white;
 }
 
 header {
     height: 80px;
 }
 
-.container {
-    display: flex;
-}
-
-@media (max-width: 768px) {
-    header {
-        height: 100px;
-    }
-
+@media (min-width: 1200px) {
     .container {
-        display: flex;
-        flex-wrap: wrap;
+        max-width: 800px;
     }
 }
 
-.navbar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1;
-}
-.navbar a{
-    transform: scale(1);
-    transition: 0.5s ease-in-out;
-}
 .navbar-menu.active {
     display: block;
 }
@@ -99,9 +86,7 @@ header {
 
 .container1 {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    margin-right: 10px;
 }
 
 .bar:hover {
@@ -119,36 +104,13 @@ header {
     color: rgba(255, 255, 255, 0.75);
 }
 
-a:hover {
-    opacity: 0.7;
-    transform: scale(1.04);
-    transition: 0.5s ease-in-out;
-}
-
-#web1,
-#web2,
-#web-h,
-#prog,
-#prog-h,
-#cir,
-#cir-h {
-    display: none;
-}
-
-#x {
-    position: relative;
-    padding: 8px 15px;
-    border-radius: 5px;
-    float: right;
-    background-color: rgb(106, 6, 6);
-    color: rgba(255, 255, 255, 0.75);
-    border: 2px solid rgb(62, 2, 2);
-    display: none;
+.Active:hover{
+opacity: 0.7;
 }
 
 @media (min-width: 768px) {
     .half-adjustment {
-        width: 33.33333333%;
+        width: 50%;
     }
 }
 
@@ -198,7 +160,7 @@ a:hover {
 }
 
 .margin-y-1 {
-    margin-top: 0.25rem !important;
+    margin-top: 7rem !important;
     margin-bottom: 0.25rem !important;
 }
 
@@ -216,33 +178,20 @@ a:hover {
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
-    width: fit-content;
-    cursor: pointer;
-    transform: scale(1);
-    transition: 0.5s ease-in-out;
 }
-.card:hover{
-    transition: 0.5s ease-in-out;
-    transform: scale(1.04);
-}
+
 .card-img {
     width: 100%;
 }
 
 .btn {
-    padding: 60px;
+    padding: 20px;
     border-radius: 5px;
-    bottom: 20px;
-    right: 20px;
-    background-color: rgb(19, 50, 66);
-    color: rgba(255, 255, 255, 0.75);
-    border: 2px solid rgb(5, 30, 43);
-    font-size: larger;
-    cursor: pointer;
 }
 
 .btn:hover {
-    opacity: 0.7;
+    background-color: rgb(55, 9, 61);
+    color: white;
 }
 
 .rounded {
@@ -254,7 +203,7 @@ a:hover {
 }
 
 .shadow {
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(83, 29, 77, 1) !important;
 }
 
 .text-center {
@@ -263,13 +212,13 @@ a:hover {
 
 .reveal {
     position: relative;
-    transform: scale(1.04);
+    transform: translateY(20px);
     opacity: 0;
     transition: 1s ease-in-out;
 }
 
 .reveal.active {
-    transform: scale(1);
+    transform: translateY(0);
     opacity: 1;
 }
 
@@ -322,16 +271,82 @@ a:hover {
 
 #BackToTop {
     position: fixed;
-    padding: 20px;
-    border-radius: 5px;
     bottom: 20px;
     right: 20px;
     background-color: rgb(19, 50, 66);
     color: rgba(255, 255, 255, 0.75);
     border: 2px solid rgb(5, 30, 43);
     display: none;
-    cursor: pointer;
 }
-#BackToTop:hover{
-    opacity: 0.7;
+
+.marquee-w {
+    position: relative;
+    transform: rotate(2deg);
+    width: 131%;
+    height: 100px;
+    left: 55%;
+    transform: translate(-65%, -19%);
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.marquee {
+    position: absolute;
+}
+
+.marquee p {
+    display: inline-block;
+    padding-left: 100%;
+    white-space: nowrap;
+    height: 100%;
+    line-height: 84px;
+    font-size: 77px;
+    animation: marquee 15s linear infinite;
+}
+
+.marquee2 p {
+    animation-delay: 7.5s;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(-100%, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 100px;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .container1{
+        flex-wrap: wrap;
+    }
+
+    .marquee-w {
+        width: 135.5%;
+        height: 70px;
+    }
+
+    .marquee p {
+        display: inline-block;
+        padding-left: 100%;
+        white-space: nowrap;
+        height: 100%;
+        line-height: 64px;
+        font-size: 44px;
+        animation: marquee 20s linear infinite;
+    }
+    
+    .marquee2 p {
+        animation-delay: 10s;
+    }
 }
